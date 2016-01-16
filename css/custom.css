@@ -9,7 +9,7 @@ a:hover, .group-name, footer .fa, #about a:hover {
 	color: #cdcdcd;
 }
 
-h1, h2 {
+h1, h2, h4, label, .btn {
 	font-weight: 200;
 }
 
@@ -36,7 +36,7 @@ h2 {
 	margin: 40px 0 30px 0;
 }
 
-#header h1 {
+#header h1, .modal-header h4 {
 	margin: 0;
 	text-shadow: 1px 0px 1px white;
 }
@@ -122,11 +122,22 @@ h2 {
 	margin-right: 5px;
 }
 
+.carousel-control.left, .carousel-control.right {
+	background-image: none;
+}
+
+.icon-prev, .icon-next {
+	color: #f3f3f3;
+}
+
+.hide {
+	display: none;
+}
 
 /*footer*/
 
 footer {
-    height: 230px;
+    height: 250px;
     padding: 30px 50px;
     border-top: 1px solid #f3f3f3;
     margin-top: 70px;
@@ -151,8 +162,16 @@ footer a:hover {
 
 #about li a {
 	text-transform: uppercase;
-
 }
+
+.modal-content {
+	border-radius: 0;
+}
+
+.modal-header {
+	background-color: #fdfdfd;
+}
+
 
 
 /*Media queries*/
@@ -160,9 +179,7 @@ footer a:hover {
 /*bigger iPad size*/
 
 @media (min-width: 769px) {
-	#about {
-		padding-left: 270px;
-	}
+
 	
 }
 
@@ -183,6 +200,13 @@ footer a:hover {
 	left: -25px;
 	top: 290px;
 	}	
+
+}
+
+/*only show up including iPad size*/
+
+@media (max-width: 768px) {
+
 }
 
 /*only show up including iPhone 6+ size*/
