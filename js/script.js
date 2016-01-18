@@ -1,4 +1,5 @@
 $(document).ready(function() {
+
 	//highlight specific .group-name when hover specific.project-group
 	$('#projectGroup1 li a').hover(function() {
 		$('#groupName1').toggleClass('highlight');
@@ -10,8 +11,14 @@ $(document).ready(function() {
 		$('#groupName3').toggleClass('highlight');
 	});
 
-	//click project name and project slides in carousel start cycling with first item
+	
 
+	//when any of the project names is clicked, remove .item class and .active class from all projects, add .hide
+	$('.project-group li a').click(function() {
+		$('.carousel-inner div').removeClass('active').removeClass('item').addClass('hide');
+	});
+
+	//click project name, start carousel with relevant project slides 
 	$('#projects .project-1-1').click(function() {
 		$('.carousel-inner .project-1-1').removeClass('hide').addClass('item');
 		$('#start1-1').addClass('active');
